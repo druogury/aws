@@ -1,5 +1,7 @@
 #! /bin/bash -v
 
+sudo apt-get install git
+
 wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 bash ~/Anaconda3-5.1.0-Linux-x86_64.sh
 echo -e $"\n#Anaconda path\nexport PATH=/home/drussier/anaconda3/bin:$PATH" >> ~/.bashrc
@@ -11,15 +13,22 @@ pip install gensim
 pip install spacy
 python -m spacy download en
 
-sudo apt-get install emacs23
-sudo apt-get install git
+# sudo apt-get install emacs23
+# http://www.nongnu.org/color-theme/index.html
+# sudo apt-get install emacs-goodies-el
+
+# https://askubuntu.com/questions/851633/emacs-25-on-ubuntu-16-10
+sudo add-apt-repository ppa:kelleyk/emacs
+sudo apt update
+sudo apt install emacs25
+/usr/bin/emacs-25.325 --version
 
 mkdir .emacs.d ; cd .emacs.d ; git init
-git remote add origin https://github.com/drussier/emacs-config-simple.git
+git remote add origin https://github.com/drussier/emacs-config.git
 git pull origin master
 echo -e $'#!/bin/bash -vf
 
-et() { emacs -q --load ~/.emacs.d/init.el "$@" -nw ; }
+et() { /usr/bin/emacs-25.325 -q --load ~/.emacs.d/init.el "$@" -nw ; }
 
 ##########git
 alias  gi="git init     "  
