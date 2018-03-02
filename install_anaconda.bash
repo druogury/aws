@@ -28,7 +28,7 @@ git remote add origin https://github.com/drussier/emacs-config.git
 git pull origin master
 echo -e $'#!/bin/bash -vf
 
-et() { /usr/bin/emacs-25.325 -q --load ~/.emacs.d/init.el "$@" -nw ; }
+et() { /usr/bin/emacs-25.325 -q --load ~/.emacs.d/init.el -nw "$@" ; }
 
 ##########git
 alias  gi="git init     "  
