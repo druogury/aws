@@ -9,8 +9,10 @@ source ~/.bashrc
 
 conda create -n py36gensim python=3.6 anaconda
 source activate py36gensim
+pip install joblib
 pip install gensim
 pip install spacy
+pip install testfixtures
 python -m spacy download en
 
 # sudo apt-get install emacs23
@@ -26,6 +28,10 @@ sudo apt install emacs25
 mkdir .emacs.d ; cd .emacs.d ; git init
 git remote add origin https://github.com/drussier/emacs-config.git
 git pull origin master
+
+ssh-keygen -t rsa
+mkdir proj
+cd proj
 
 echo -e $'
 [user]

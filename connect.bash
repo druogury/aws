@@ -4,6 +4,6 @@
 
 # ./recommender-ec2-ssh
 
-SSH_USER=drussier ls ~/GitHub/recommender-bash-tools-master/recommender-ec2-ssh
+SSH_USER=drussier ~/GitHub/recommender-bash-tools-master/recommender-ec2-ssh
 
 exit 0
