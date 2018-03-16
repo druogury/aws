@@ -1,6 +1,7 @@
 #! /bin/bash -v
 
 sudo apt-get install git
+sudo apt-get install unzip
 
 wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 bash ~/Anaconda3-5.1.0-Linux-x86_64.sh
@@ -13,7 +14,9 @@ pip install joblib
 pip install gensim
 pip install spacy
 pip install testfixtures
+pip install --upgrade awscli
 python -m spacy download en
+aws configure
 
 # sudo apt-get install emacs23
 # http://www.nongnu.org/color-theme/index.html
