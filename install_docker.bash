@@ -21,4 +21,11 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get install docker-ce
 
+sudo service docker stop
+sudo rm /var/run/docker.pid
+
+# in screen
+tmux new -s dockerd
+# sudo dockerd -H tcp://127.0.0.1:2375 &
+
 exit 0
