@@ -1,7 +1,6 @@
 #! /bin/bash -v
 
-sudo apt-get install git
-sudo apt-get install unzip
+sudo apt-get install -y git unzip
 
 wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 bash ~/Anaconda3-5.1.0-Linux-x86_64.sh
@@ -25,7 +24,7 @@ aws configure
 # https://askubuntu.com/questions/851633/emacs-25-on-ubuntu-16-10
 sudo add-apt-repository ppa:kelleyk/emacs
 sudo apt update
-sudo apt install emacs25
+sudo apt install -y emacs25
 /usr/bin/emacs-25.325 --version
 
 mkdir .emacs.d ; cd .emacs.d ; git init
