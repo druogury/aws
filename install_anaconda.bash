@@ -44,7 +44,11 @@ echo -e $'
 
 echo -e $'#!/bin/bash -vf
 
-et() { /usr/bin/emacs-25.325 -q --load ~/.emacs.d/init.el -nw "$@" ; }
+EMACS="/usr/bin/emacs-25.325 -q --load ~/.emacs.d/init.el -nw"
+et() { $EMACS "$@" ; }
+# https://unix.stackexchange.com/questions/73484/how-can-i-set-vi-as-my-default-editor-in-unix
+export VISUAL=$EMACS
+export EDITOR="$VISUAL"
 
 gitpull() {
 if [ -z "$1" ]
