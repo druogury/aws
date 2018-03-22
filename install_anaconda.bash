@@ -39,7 +39,8 @@ cd proj
 echo -e $'
 [user]
         name = drussier
-        email = damien.russier@gmail.com'
+        email = damien.russier@gmail.com
+' >> ~/.gitconfig
 
 echo -e $'#!/bin/bash -vf
 
