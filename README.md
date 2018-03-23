@@ -9,7 +9,8 @@ sudo apt-get install -y git
 
 2. create SSH key and add it to [GitHub](https://github.com/settings/keys) account 
 ```{r, engine='bash', submit} 
-ssh-keygen -t rsa  
+ssh-keygen -t rsa -q -N "" -f ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub
 ```
 
 3. clone [repo](https://github.com/druogury/aws) with setup script
