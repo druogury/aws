@@ -7,12 +7,12 @@ Setup an EC2 AWS instance with Git, Python (Anaconda), Emacs, and aliases in ~/.
 sudo apt-get install -y git  
 ```
 
-2. create SSH key and add it to GitHub account 
+2. create SSH key and add it to [GitHub](https://github.com/settings/keys) account 
 ```{r, engine='bash', submit} 
 ssh-keygen -t rsa  
 ```
 
-3. clone repo with setup script
+3. clone [repo](https://github.com/druogury/aws) with setup script
 ```{r, engine='bash', submit}
 mkdir proj ; cd proj
 git clone git@github.com:druogury/aws.git
