@@ -1,6 +1,6 @@
 #! /bin/bash -v
 
-sudo apt-get install -y git unzip
+sudo apt-get install -y unzip
 
 wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
 bash ~/Anaconda3-5.1.0-Linux-x86_64.sh
@@ -17,10 +17,6 @@ pip install --upgrade awscli
 python -m spacy download en
 aws configure
 
-# sudo apt-get install emacs23
-# http://www.nongnu.org/color-theme/index.html
-# sudo apt-get install emacs-goodies-el
-
 # https://askubuntu.com/questions/851633/emacs-25-on-ubuntu-16-10
 sudo add-apt-repository ppa:kelleyk/emacs
 sudo apt update
@@ -30,10 +26,6 @@ sudo apt install -y emacs25
 mkdir .emacs.d ; cd .emacs.d ; git init
 git remote add origin https://github.com/drussier/emacs-config.git
 git pull origin master
-
-ssh-keygen -t rsa
-mkdir proj
-cd proj
 
 echo -e $'
 [user]
@@ -82,9 +74,6 @@ alias juplab="jupyter lab &"
 
 ########## shortcuts linux
 alias  cal="awk 'BEGIN{print \!*}'"
-alias   xt="xterm -bg black -fg white -fn 10x20 -cm -sl 500 -sb -T Geocluster -e '/bin/csh -l' &"
-alias term="terminator -m &"
-alias   ko="konsole &"
 alias  lsn="ls --color=none -F -nalh"
 alias lsns="ls --color=none -F -nalhS"
 alias  lsr="ls --color=none -F -nalRh" 
