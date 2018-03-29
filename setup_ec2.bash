@@ -13,9 +13,9 @@ else
    echo -e $"\n#Anaconda path\nexport PATH=/home/drussier/anaconda3/bin:$PATH" >> ~/.bashrc
 fi
 source ~/.bashrc
-sleep 1s
+sleep 2s
 
-conda create -n py36gensim python=3.6 anaconda
+conda create -y -n py36gensim python=3.6 anaconda
 source activate py36gensim
 pip install joblib
 pip install gensim
