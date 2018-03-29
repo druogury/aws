@@ -1,11 +1,19 @@
 #! /bin/bash -v
 
+ANACONDA="/home/drussier/Anaconda3-5.1.0-Linux-x86_64.sh"
+
 sudo apt-get install -y unzip
 
-wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
-bash ~/Anaconda3-5.1.0-Linux-x86_64.sh
-echo -e $"\n#Anaconda path\nexport PATH=/home/drussier/anaconda3/bin:$PATH" >> ~/.bashrc
+if [ -f $ANACONDA ]; then
+   echo "File $ANACONDA already exists."
+else
+   echo "File $ANACONDA does not exist => Download"
+   wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
+   bash $ANACONDA
+   echo -e $"\n#Anaconda path\nexport PATH=/home/drussier/anaconda3/bin:$PATH" >> ~/.bashrc
+fi
 source ~/.bashrc
+sleep 1s
 
 conda create -n py36gensim python=3.6 anaconda
 source activate py36gensim
