@@ -16,6 +16,7 @@ fi
 source ~/.bashrc
 sleep 2s
 
+pip install --upgrade pip
 conda create -y -n py36gensim python=3.6 anaconda
 source activate py36gensim
 pip install joblib
