@@ -1,6 +1,7 @@
 #! /bin/bash -v
 
 ANACONDA="/home/drussier/Anaconda3-5.1.0-Linux-x86_64.sh"
+EMACS_DIR="/home/drussier/.emacs.d"
 
 sudo apt-get install -y unzip
 
@@ -31,7 +32,10 @@ sudo apt update
 sudo apt install -y emacs25
 /usr/bin/emacs-25.325 --version
 
-mkdir .emacs.d ; cd .emacs.d ; git init
+if [ ! -d "$EMACS_DIR" ]; then
+    mkdir .emacs.d
+fi
+cd .emacs.d ; git init
 git remote add origin https://github.com/drussier/emacs-config.git
 git pull origin master
 
