@@ -19,5 +19,5 @@ mkdir proj && cd proj && git clone git@github.com:druogury/aws.git
 
 4. run setup scripts
 ```{r, engine='bash', submit}
-bash ~/proj/aws/setup_ec2.bash
+cd && bash ~/proj/aws/setup_ec2.bash
 ```
