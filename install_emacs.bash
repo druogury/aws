@@ -25,4 +25,6 @@ export VISUAL=$EMACS
 export EDITOR="$VISUAL"
 ' >> ~/.bash_aliases
 
+source ~/.bashrc
+
 exit 0
