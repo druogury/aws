@@ -16,4 +16,6 @@ alias drmi="docker rmi $(docker images -q)"
 alias drm="docker rm $(docker ps -aq)"
 ' >> ~/.bash_aliases
 
+source ~/.bashrc
+
 exit 0
