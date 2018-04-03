@@ -25,7 +25,14 @@ sudo service docker stop
 sudo rm /var/run/docker.pid
 
 # in screen
-tmux new -s dockerd
+# tmux new -s dockerd
 # sudo dockerd -H tcp://127.0.0.1:2375 &
+
+echo -e $'
+##########
+alias dk="docker -H tcp://127.0.0.1:2375"
+alias drmi="dk rmi $(dk images -q)"
+alias drm="dk rm $(dk ps -aq)"
+' >> ~/.bash_aliases
 
 exit 0

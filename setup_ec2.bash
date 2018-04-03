@@ -1,44 +1,13 @@
 #! /bin/bash -v
 
-ANACONDA="/home/drussier/Anaconda3-5.1.0-Linux-x86_64.sh"
-EMACS_DIR="/home/drussier/.emacs.d"
+./install_anaconda.bash
+./install_emacs.bash
+./install_docker.bash
 
-sudo apt-get install -y unzip
+sudo apt-get install -y bzip2, unzip
 
-if [ -f $ANACONDA ]; then
-   echo "File $ANACONDA already exists."
-else
-   echo "File $ANACONDA does not exist => Download"
-   wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
-   bash $ANACONDA
-   echo -e $"\n#Anaconda path\nexport PATH=/home/drussier/anaconda3/bin:$PATH" >> ~/.bashrc
-fi
-source ~/.bashrc
-sleep 2s
-
-pip install --upgrade pip
-conda create -y -n py36gensim python=3.6 anaconda
-source activate py36gensim
-pip install joblib
-pip install gensim
-pip install spacy
-pip install testfixtures
 pip install --upgrade awscli
-python -m spacy download en
 aws configure
-
-# https://askubuntu.com/questions/851633/emacs-25-on-ubuntu-16-10
-sudo add-apt-repository ppa:kelleyk/emacs
-sudo apt update
-sudo apt install -y emacs25
-/usr/bin/emacs-25.325 --version
-
-if [ ! -d "$EMACS_DIR" ]; then
-    mkdir .emacs.d
-fi
-cd .emacs.d ; git init
-git remote add origin https://github.com/drussier/emacs-config.git
-git pull origin master
 
 echo -e $'
 [user]
@@ -47,12 +16,6 @@ echo -e $'
 ' >> ~/.gitconfig
 
 echo -e $'#!/bin/bash -vf
-
-EMACS="/usr/bin/emacs-25.325 -q --load ~/.emacs.d/init.el -nw"
-et() { $EMACS "$@" ; }
-# https://unix.stackexchange.com/questions/73484/how-can-i-set-vi-as-my-default-editor-in-unix
-export VISUAL=$EMACS
-export EDITOR="$VISUAL"
 
 gitpull() {
 if [ -z "$1" ]
