@@ -1,7 +1,7 @@
 #!/bin/bash -i
 
-# https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-ce
-sudo apt-get install docker
+# https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1
+sudo apt-get update && sudo apt-get install docker-ce
 sudo service docker start
 sudo usermod -a -G docker drussier
 
