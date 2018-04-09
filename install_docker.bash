@@ -1,4 +1,4 @@
-#!/bin/bash -v
+#!/bin/bash -i
 
 # https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-ce
 sudo apt-get install docker

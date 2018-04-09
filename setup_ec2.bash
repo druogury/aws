@@ -1,6 +1,8 @@
-#! /bin/bash -v
+#! /bin/bash -iv
 
 ./install_anaconda.bash
+py=$(which python)
+echo "which python : $py"
 ./install_emacs.bash
 ./install_docker.bash
 

@@ -1,4 +1,4 @@
-#!/bin/bash -v
+#!/bin/bash -i
 
 EMACS_DIR="/home/drussier/.emacs.d"
 
@@ -9,9 +9,9 @@ sudo apt install -y emacs25
 /usr/bin/emacs-25.325 --version
 
 if [ ! -d "$EMACS_DIR" ]; then
-    mkdir .emacs.d
+    mkdir ~/.emacs.d
 fi
-cd .emacs.d ; git init
+cd ~/.emacs.d ; git init
 git remote add origin https://github.com/drussier/emacs-config.git
 git pull origin master
 
