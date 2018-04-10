@@ -1,10 +1,12 @@
-#! /bin/bash -v
+#! /bin/bash -iv
 
 ./install_anaconda.bash
+py=$(which python)
+echo "which python : $py"
 ./install_emacs.bash
 ./install_docker.bash
 
-sudo apt-get install -y bzip2, unzip
+sudo apt-get upgrade && sudo apt-get install -y bzip2, unzip
 
 pip install --upgrade awscli
 aws configure

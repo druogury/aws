@@ -19,6 +19,5 @@ mkdir proj && cd proj && git clone git@github.com:druogury/aws.git
 
 4. run install scripts
 ```{r, engine='bash', submit}
-cd && bash ~/proj/aws/setup_ec2.bash
-proj/aws/install_docker.bash
+cd ~/proj/aws/ && ./setup_ec2.bash
 ```

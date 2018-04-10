@@ -1,7 +1,7 @@
-#!/bin/bash -v
+#!/bin/bash -i
 
-# https://docs.docker.com/install/linux/docker-ce/ubuntu/#upgrade-docker-ce
-sudo apt-get install docker
+# https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-docker-ce-1
+sudo apt-get update && sudo apt-get install docker-ce
 sudo service docker start
 sudo usermod -a -G docker drussier
 
@@ -15,5 +15,7 @@ echo -e $'
 alias drmi="docker rmi $(docker images -q)"
 alias drm="docker rm $(docker ps -aq)"
 ' >> ~/.bash_aliases
+
+source ~/.bashrc
 
 exit 0
