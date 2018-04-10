@@ -20,6 +20,7 @@ echo -e $'
 ##########
 EMACS="/usr/bin/emacs-25.325 -q --load ~/.emacs.d/init.el -nw"
 et() { $EMACS "$@" ; }
+etd() { $EMACS "$@" --debug-init ; }
 # https://unix.stackexchange.com/questions/73484/how-can-i-set-vi-as-my-default-editor-in-unix
 export VISUAL=$EMACS
 export EDITOR="$VISUAL"
