@@ -4,7 +4,11 @@ Setup an EC2 AWS instance with Git, Python (Anaconda), Emacs, and aliases in ~/.
 ## Procedure  
 1. Install git
 ```{r, engine='bash', submit}
-sudo apt-get install -y git  
+sudo apt-get install python-software-properties && \
+sudo add-apt-repository ppa:git-core/ppa && \
+sudo apt-get update && \
+sudo apt-get install -y git && \
+git --version
 ```
 
 2. create SSH key and add it to [GitHub](https://github.com/settings/keys) account 
