@@ -10,6 +10,7 @@ sudo apt-get upgrade && sudo apt-get install -y bzip2, unzip
 
 pip install --upgrade awscli
 aws configure
+pip install aws-mfa
 
 echo -e $'
 [user]
@@ -45,6 +46,10 @@ jupyter nbconvert --to python $1
 
 blk() {
 mv "$1" `echo $1 | tr ',' '_' | tr ':' '_' | tr ' ' '_'  | tr -s '_'`
+}
+
+mfa() {
+    aws-mfa --device=arn:aws:iam::556593845588:mfa/damien.russier@ogury.co
 }
 
 alias ipynb="jupyter notebook &"
