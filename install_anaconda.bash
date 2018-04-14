@@ -19,7 +19,7 @@ echo -e $"\n#Miniconda path\nexport PATH=/home/drussier/miniconda3/bin:$PATH" >>
 source ~/.bashrc
 sleep 2s
 
-pip install -y --upgrade pip
+pip install --upgrade pip
 exit 0
 
 conda create -y -n py36gensim python=3.6 anaconda
