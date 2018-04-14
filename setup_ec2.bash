@@ -1,10 +1,15 @@
 #! /bin/bash -iv
 
 ./install_anaconda.bash
+source ~/.bashrc
 py=$(which python)
 echo "which python : $py"
+
 ./install_emacs.bash
+source ~/.bashrc
+
 ./install_docker.bash
+source ~/.bashrc
 
 sudo apt-get install -y bzip2 lbzip2 unzip
 
