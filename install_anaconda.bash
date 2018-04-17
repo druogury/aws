@@ -20,6 +20,7 @@ source ~/.bashrc
 sleep 2s
 
 pip install --upgrade pip
+pip install --upgrade pyflakes
 exit 0
 
 conda create -y -n py36gensim python=3.6 anaconda
