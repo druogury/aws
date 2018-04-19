@@ -57,6 +57,10 @@ mfa() {
     aws-mfa --device=arn:aws:iam::556593845588:mfa/damien.russier@ogury.co
 }
 
+headS3file() { # drussier/apps_usage/sequences/Unsaved/2018/04/19/962bb21f-4313-4323-892d-c711c7a79154.csv
+    aws s3api get-object --bucket ogury-tmp --key $1  --range bytes=0-1000000 tmp_file.txt && head tmp_file.txt && rm tmp_file.txt
+}
+
 alias ipynb="jupyter notebook &"
 alias juplab="jupyter lab &"
 
