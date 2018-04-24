@@ -92,13 +92,7 @@ alias grb="git rebase "
 alias glg="git log --graph --decorate --oneline"
 
 ##########
-alias dk="docker -H tcp://127.0.0.1:2375"
-alias drmi="dk rmi $(dk images -q)"
-alias drm="dk rm $(dk ps -aq)"
-
-##########
-alias py36gensim="source activate py36gensim ; which python"
-alias proj="py36gensim ; cd $HOME/proj/"
+alias proj="cd $HOME/proj/"
 alias appinst="proj ; cd apps_install/src/ ; export PYTHONPATH=$HOME/proj/apps_install/src/ ; pwd"
 ' >> ~/.bash_aliases
 
