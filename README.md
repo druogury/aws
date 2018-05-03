@@ -19,10 +19,10 @@ ssh-keygen -t rsa -q -N "" -f ~/.ssh/id_rsa && cat ~/.ssh/id_rsa.pub
 
 3. clone [repo](https://github.com/druogury/aws) with setup script
 ```{r, engine='bash', submit}
-mkdir proj && cd proj && git clone git@github.com:druogury/aws.git
+mkdir proj && cd proj && git clone git@github.com:druogury/aws-ec2-setup.git
 ```
 
 4. run install scripts
 ```{r, engine='bash', submit}
-cd ~/proj/aws/ && ./setup_ec2.bash
+cd ~/proj/aws-ec2-setup/ && ./setup_ec2.bash
 ```
