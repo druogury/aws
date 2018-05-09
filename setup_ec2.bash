@@ -54,7 +54,7 @@ mv "$1" `echo $1 | tr ',' '_' | tr ':' '_' | tr ' ' '_'  | tr -s '_'`
 }
 
 mfa() {
-    aws-mfa --device=arn:aws:iam::556593845588:mfa/damien.russier@ogury.co
+    aws-mfa --device=arn:aws:iam::556593845588:mfa/damien.russier@ogury.co # --duration=129600
 }
 
 headS3file() { # drussier/apps_usage/sequences/Unsaved/2018/04/19/962bb21f-4313-4323-892d-c711c7a79154.csv
