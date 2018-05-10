@@ -20,7 +20,7 @@ pip install aws-mfa
 echo -e $'
 [user]
         name = drussier
-        email = damien.russier@gmail.com
+        email = damien.russier@ogury.co
 ' >> ~/.gitconfig
 
 echo -e $'#!/bin/bash -vf
