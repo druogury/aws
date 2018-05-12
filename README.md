@@ -7,7 +7,6 @@ Setup an EC2 AWS instance with Git, Python (Miniconda), Emacs, and aliases in ~/
 sudo apt-get update && \
 sudo apt-get install -y python-software-properties && \
 sudo add-apt-repository ppa:git-core/ppa && \
-sudo apt-get update && \
 sudo apt-get install -y git && \
 git --version
 ```
