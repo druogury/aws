@@ -94,6 +94,8 @@ alias glg="git log --graph --decorate --oneline"
 ##########
 alias proj="cd $HOME/proj/"
 alias appinst="proj ; cd apps_install/src/ ; export PYTHONPATH=$HOME/proj/apps_install/src/ ; pwd"
+alias projaws="proj ; cd aws-ec2-setup/"
+alias d2v="proj ; cd apps-embedding/ ; export PYTHONPATH=$HOME/proj/apps-embedding/src/ ; pwd"
 ' >> ~/.bash_aliases
 
 source ~/.bashrc

@@ -7,7 +7,6 @@ Setup an EC2 AWS instance with Git, Python (Miniconda), Emacs, and aliases in ~/
 sudo apt-get update && \
 sudo apt-get install -y python-software-properties && \
 sudo add-apt-repository ppa:git-core/ppa && \
-sudo apt-get update && \
 sudo apt-get install -y git && \
 git --version
 ```
@@ -29,7 +28,7 @@ cd ~/proj/aws-ec2-setup/ && ./setup_ec2.bash
 
 5. Clone working [repo](https://github.com/druogury/apps_install) 
 ```{r, engine='bash', submit}
-cd ~/proj && git clone git@github.com:druogury/apps_install.git
+cd ~/proj && git clone git@github.com:druogury/apps-embedding.git
 ```
 
 ## Shutdown
