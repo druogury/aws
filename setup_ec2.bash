@@ -11,6 +11,9 @@ source ~/.bashrc
 ./install_docker.bash
 source ~/.bashrc
 
+./install_r.bash
+source ~/.bashrc
+
 sudo apt-get install -y bzip2 lbzip2 unzip
 
 pip install --upgrade awscli
@@ -68,8 +71,8 @@ alias juplab="jupyter lab &"
 alias  cal="awk 'BEGIN{print \!*}'"
 alias  lsn="ls --color=none -F -nalh"
 alias lsns="ls --color=none -F -nalhS"
-alias  lsr="ls --color=none -F -nalRh" 
-alias lsrs="ls --color=none -F -nalRhS" 
+alias  lsr="ls --color=none -F -nalRh"
+alias lsrs="ls --color=none -F -nalRhS"
 alias   ll="ls -lhrt"
 alias   hh="history | egrep -i \!*"
 alias  hht="history | egrep -i \!* | tail"
@@ -79,7 +82,7 @@ alias edal="et ~/.bash_aliases"
 
 
 ##########git
-alias  gi="git init     "  
+alias  gi="git init     "
 alias gco="git commit   "
 alias gch="git checkout "
 alias gst="git status   "
