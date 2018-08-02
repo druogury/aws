@@ -1,5 +1,6 @@
 #!/bin/bash -v
 
+mro='3.5.0'
 cd $HOME
 
 wget https://mran.blob.core.windows.net/install/mro/$mro/microsoft-r-open-$mro.tar.gz \
