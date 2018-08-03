@@ -13,4 +13,6 @@ wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/lib
    && sudo dpkg -i /tmp/libpng12.deb \
    && rm /tmp/libpng12.deb
 
+sudo apt-get install libssl-dev gfortran libxml2-dev r-cran-xml
+
 exit 0
