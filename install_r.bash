@@ -13,6 +13,11 @@ wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/lib
    && sudo dpkg -i /tmp/libpng12.deb \
    && rm /tmp/libpng12.deb
 
-sudo apt-get install libssl-dev gfortran libxml2-dev r-cran-xml
+sudo apt-get install libssl-dev gfortran libxml2-dev r-cran-xml libcurl4-openssl-dev libv8-3.14-dev
 
 exit 0
+
+   50  sudo apt-get remove libcurl4-nss-dev
+   54  sudo apt-get remove libssl-dev
+   58  sudo apt-get install libcurl4-openssl-dev
+   60  sudo apt-get install libv8-3.14-dev
