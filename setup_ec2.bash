@@ -19,6 +19,7 @@ sudo apt-get install -y bzip2 lbzip2 unzip
 pip install --upgrade pip awscli
 aws configure
 sudo pip install aws-mfa
+sed -i 's/default/default-long-term/g' ~/.aws/credentials
 
 echo -e $'
 [user]
