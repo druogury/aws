@@ -14,7 +14,7 @@ source ~/.bashrc
 ./install_r.bash
 source ~/.bashrc
 
-sudo apt-get install -y bzip2 lbzip2 unzip
+sudo apt-get install -y bzip2 lbzip2 unzip postgresql postgresql-contrib
 
 pip install --upgrade pip awscli
 aws configure
@@ -67,6 +67,10 @@ headS3file() { # drussier/apps_usage/sequences/Unsaved/2018/04/19/962bb21f-4313-
 
 alias ipynb="jupyter notebook &"
 alias juplab="jupyter lab &"
+
+##########
+# redshift
+alias psqlrs="psql -h ogurydatawarehouse.cikxp3g7d0py.eu-west-1.redshift.amazonaws.com -p 5439 -d dwurlvisits -U damien"
 
 ########## shortcuts linux
 alias  cal="awk 'BEGIN{print \!*}'"
