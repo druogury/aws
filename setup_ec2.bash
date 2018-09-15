@@ -16,9 +16,9 @@ source ~/.bashrc
 
 sudo apt-get install -y bzip2 lbzip2 unzip
 
-pip install --upgrade awscli
+pip install --upgrade pip awscli
 aws configure
-pip install aws-mfa
+sudo pip install aws-mfa
 
 echo -e $'
 [user]
