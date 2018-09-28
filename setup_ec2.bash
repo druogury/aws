@@ -82,16 +82,14 @@ alias iab="proj ; cd lab-apps-iab-categorization/ ; export PYTHONPATH=$HOME/proj
 ' >> ~/.bash_aliases
 
 #################### install desired softwares
+./install_emacs.bash
+# ./install_docker.bash
+# ./install_r.bash
 ./install_anaconda.bash
 source ~/.bashrc
+
 py=$(which python)
 echo "which python : $py"
-
-./install_emacs.bash
-./install_docker.bash
-./install_r.bash
-
-source ~/.bashrc
 
 sudo apt-get install -y bzip2 lbzip2 unzip postgresql postgresql-contrib
 
