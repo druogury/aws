@@ -1,6 +1,6 @@
 #!/bin/bash -i
 
-EMACS_DIR="/home/drussier/.emacs.d"
+EMACS_DIR=${HOME}/.emacs.d
 
 # https://askubuntu.com/questions/851633/emacs-25-on-ubuntu-16-10
 sudo add-apt-repository ppa:kelleyk/emacs
@@ -25,7 +25,5 @@ etd() { $EMACS "$@" --debug-init ; }
 export VISUAL=$EMACS
 export EDITOR="$VISUAL"
 ' >> ~/.bash_aliases
-
-source ~/.bashrc
 
 exit 0
