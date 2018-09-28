@@ -1,32 +1,6 @@
 #! /bin/bash -iv
 
-./install_anaconda.bash
-source ~/.bashrc
-py=$(which python)
-echo "which python : $py"
-
-./install_emacs.bash
-source ~/.bashrc
-
-./install_docker.bash
-source ~/.bashrc
-
-./install_r.bash
-source ~/.bashrc
-
-sudo apt-get install -y bzip2 lbzip2 unzip postgresql postgresql-contrib
-
-sudo pip install --upgrade pip awscli
-aws configure
-sudo pip install aws-mfa
-sed -i 's/default/default-long-term/g' ~/.aws/credentials
-
-echo -e $'
-[user]
-        name = drussier
-        email = damien.russier@ogury.co
-' >> ~/.gitconfig
-
+#################### write .bash_aliases
 echo -e $'#!/bin/bash -vf
 
 gitpull() {
@@ -106,6 +80,31 @@ alias projaws="proj ; cd aws-ec2-setup/"
 alias d2v="proj ; cd apps-embedding/              ; export PYTHONPATH=$HOME/proj/apps-embedding/src/ ; pwd"
 alias iab="proj ; cd lab-apps-iab-categorization/ ; export PYTHONPATH=$HOME/proj/lab-app-iab-categorization/ ; pwd"
 ' >> ~/.bash_aliases
+
+#################### install desired softwares
+./install_anaconda.bash
+source ~/.bashrc
+py=$(which python)
+echo "which python : $py"
+
+./install_emacs.bash
+./install_docker.bash
+./install_r.bash
+
+source ~/.bashrc
+
+sudo apt-get install -y bzip2 lbzip2 unzip postgresql postgresql-contrib
+
+sudo pip install --upgrade pip awscli
+aws configure
+sudo pip install aws-mfa
+sed -i 's/default/default-long-term/g' ~/.aws/credentials
+
+echo -e $'
+[user]
+        name = drussier
+        email = damien.russier@ogury.co
+' >> ~/.gitconfig
 
 source ~/.bashrc
 
