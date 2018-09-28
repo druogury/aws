@@ -19,11 +19,18 @@ git pull origin master
 echo -e $'
 ##########
 EMACS="/usr/bin/emacs-25.325 -q --load ~/.emacs.d/init.el -nw"
+
 et() { $EMACS "$@" ; }
 etd() { $EMACS "$@" --debug-init ; }
+# emacs client in terminal '-t' == '-nw' from 'man emacsclient')
+ec() { emacsclient -t ; }
 # https://unix.stackexchange.com/questions/73484/how-can-i-set-vi-as-my-default-editor-in-unix
 export VISUAL=$EMACS
 export EDITOR="$VISUAL"
 ' >> ~/.bash_aliases
+
+# start/stop the Emacs server
+alias emstart="emacs --daemon -q --load ~/.emacs.d/init.el"
+alias emstop="emacsclient -e '(kill-emacs)'" # '-e' == eval
 
 exit 0
