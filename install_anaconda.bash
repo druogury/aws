@@ -1,7 +1,7 @@
 #!/bin/bash -i
 
-ANACONDA="/home/drussier/Anaconda3-5.1.0-Linux-x86_64.sh"
-MINICONDA="/home/drussier/Miniconda3-latest-Linux-x86_64.sh"
+ANACONDA=${HOME}/Anaconda3-5.1.0-Linux-x86_64.sh
+MINICONDA=${HOME}/Miniconda3-latest-Linux-x86_64.sh
 
 cd $HOME
 if [ -f $MINICONDA ]; then
