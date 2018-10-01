@@ -85,7 +85,7 @@ alias iab="proj ; cd lab-apps-iab-categorization/ ; export PYTHONPATH=$HOME/proj
 ./install_emacs.bash
 # ./install_docker.bash
 # ./install_r.bash
-./install_anaconda.bash
+# ./install_anaconda.bash
 source ~/.bashrc
 
 py=$(which python)
