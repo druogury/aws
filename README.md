@@ -29,7 +29,7 @@ cd ~/proj/aws-ec2-setup/ && ./setup_ec2.bash
 5. Clone working [repo](https://github.com/druogury/apps_install) 
 ```{r, engine='bash', submit}
 # cd ~/proj && git clone git@github.com:druogury/apps-embedding.git
-cd ~/proj && git clone git@github.com:druogury/lab-apps-iab-categorization.git
+cd ~/proj && git clone git@github.com:Ogury/lab-apps-iab-categorization.git
 ```
 
 ## Shutdown
