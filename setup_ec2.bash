@@ -91,7 +91,7 @@ source ~/.bashrc
 py=$(which python)
 echo "which python : $py"
 
-apt-get install -y bzip2 lbzip2 unzip postgresql postgresql-contrib # sudo
+apt-get install -y bzip2 lbzip2 unzip gzip tmux postgresql postgresql-contrib # sudo
 
 pip install cython
 pip install --upgrade pip # sudo
