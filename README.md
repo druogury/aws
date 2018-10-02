@@ -33,13 +33,15 @@ cd ~/proj && git clone git@github.com:Ogury/lab-apps-iab-categorization.git
 ```
 
 ## From private Docker image
-1. Download the Docker image
+1. Install Docker following the [script](https://github.com/druogury/aws-ec2-setup/blob/master/install_docker.bash)
+
+2. Download the Docker image
 ```{r, engine='bash', submit}
 sudo docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PWD
 sudo docker pull drudocker/ogury-dev-tools
 ```
 
-2. Run a Docker container inside a tmux
+3. Run a Docker container inside a tmux
 ```{r, engine='bash', submit}
 tmux new -s dckr
 sudo docker run -it drudocker/ogury-dev-tools /bin/bash
