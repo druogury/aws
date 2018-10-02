@@ -91,11 +91,11 @@ source ~/.bashrc
 py=$(which python)
 echo "which python : $py"
 
-sudo apt-get install -y bzip2 lbzip2 unzip postgresql postgresql-contrib
+apt-get install -y bzip2 lbzip2 unzip postgresql postgresql-contrib # sudo
 
-sudo pip install --upgrade pip awscli
+pip install --upgrade pip awscli # sudo
 aws configure
-sudo pip install aws-mfa
+pip install aws-mfa # sudo
 sed -i 's/default/default-long-term/g' ~/.aws/credentials
 
 echo -e $'
