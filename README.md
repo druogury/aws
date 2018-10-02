@@ -1,7 +1,7 @@
-# aws  
+# aws-ec2-setup  
 Setup an EC2 AWS instance with Git, Python (Miniconda), Emacs, and aliases in ~/.bash_profile
 
-## Procedure  
+## Manual setup  
 1. Install git
 ```{r, engine='bash', submit}
 sudo apt-get update && \
@@ -30,6 +30,19 @@ cd ~/proj/aws-ec2-setup/ && sudo ./setup_ec2.bash
 ```{r, engine='bash', submit}
 # cd ~/proj && git clone git@github.com:druogury/apps-embedding.git
 cd ~/proj && git clone git@github.com:Ogury/lab-apps-iab-categorization.git
+```
+
+## From private Docker image
+1. Download the Docker image
+```{r, engine='bash', submit}
+sudo docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PWD
+sudo docker pull drudocker/ogury-dev-tools
+```
+
+2. Run a Docker container inside a tmux
+```{r, engine='bash', submit}
+tmux new -s dckr
+sudo docker run -it drudocker/ogury-dev-tools /bin/bash
 ```
 
 ## Shutdown
