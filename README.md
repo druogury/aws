@@ -23,7 +23,7 @@ mkdir proj && cd proj && git clone git@github.com:druogury/aws-ec2-setup.git
 
 4. Run install scripts
 ```{r, engine='bash', submit}
-cd ~/proj/aws-ec2-setup/ && ./setup_ec2.bash
+cd ~/proj/aws-ec2-setup/ && sudo ./setup_ec2.bash
 ```
 
 5. Clone working [repo](https://github.com/druogury/apps_install) 
