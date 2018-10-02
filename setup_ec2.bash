@@ -93,7 +93,9 @@ echo "which python : $py"
 
 apt-get install -y bzip2 lbzip2 unzip postgresql postgresql-contrib # sudo
 
-pip install --upgrade pip awscli # sudo
+pip install cython
+pip install --upgrade pip # sudo
+pip install awscli pyflakes --ignore-installed pyyaml
 aws configure
 pip install aws-mfa # sudo
 sed -i 's/default/default-long-term/g' ~/.aws/credentials
