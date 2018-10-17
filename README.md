@@ -4,9 +4,10 @@ Setup an EC2 AWS instance with Git, Python (Miniconda), Emacs, and aliases in ~/
 ## Manual setup  
 1. Install git
 ```{r, engine='bash', submit}
-sudo apt-get update && \
 sudo apt-get install -y python-software-properties && \
+# http://lifeonubuntu.com/upgrading-ubuntu-to-use-the-latest-git-version/
 sudo add-apt-repository -y ppa:git-core/ppa && \
+sudo apt-get update && \
 sudo apt-get install -y git && \
 git --version
 ```
