@@ -85,13 +85,13 @@ alias iab="proj ; cd lab-apps-iab-categorization/ ; export PYTHONPATH=$HOME/proj
 ./install_emacs.bash
 # ./install_docker.bash
 # ./install_r.bash
-# ./install_anaconda.bash
+./install_anaconda.bash
 source ~/.bashrc
 
 py=$(which python)
 echo "which python : $py"
 
-apt-get install -y bzip2 lbzip2 unzip gzip tmux postgresql postgresql-contrib # sudo
+sudo apt-get install -y bzip2 lbzip2 unzip gzip tmux postgresql postgresql-contrib # sudo
 
 pip install cython
 pip install --upgrade pip # sudo

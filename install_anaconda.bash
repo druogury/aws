@@ -19,14 +19,10 @@ echo -e $"\n#Miniconda path\nexport PATH=/home/drussier/miniconda3/bin:$PATH" >>
 source ~/.bashrc
 sleep 2s
 
-pip install --upgrade pip
-pip install --upgrade pyflakes
+pip install --upgrade pip pyflakes
 exit 0
 
 conda create -y -n py36gensim python=3.6 anaconda
 source activate py36gensim
-pip install joblib
-pip install gensim
-pip install spacy
-pip install testfixtures
+pip install joblib gensim spacy testfixtures
 python -m spacy download en
