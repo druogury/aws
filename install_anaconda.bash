@@ -11,8 +11,8 @@ else
    # wget https://repo.continuum.io/archive/Anaconda3-5.1.0-Linux-x86_64.sh
    wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 fi
-bash $MINICONDA
-echo -e $"\n#Miniconda path\nexport PATH=/home/drussier/miniconda3/bin:$PATH" >> ~/.bashrc
+bash $MINICONDA -b -p ~/anaconda3
+echo 'export PATH="~/miniconda3/bin:$PATH"' >> ~/.bashrc
 
 # https://askubuntu.com/questions/64387/can-not-successfully-source-bashrc-from-a-shell-script?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa
 # https://ubuntuforums.org/showthread.php?t=1876075
